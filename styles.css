@@ -1622,6 +1622,18 @@ p {
   border-radius: var(--radius-md) var(--radius-md) 2px var(--radius-md);
 }
 
+.chat-message--user::selection,
+.chat-message--user *::selection {
+  background: rgba(0, 0, 0, 0.35) !important;
+  color: #ffffff !important;
+}
+
+.chat-message--ai::selection,
+.chat-message--ai *::selection {
+  background: var(--accent) !important;
+  color: #07070d !important;
+}
+
 .chat-message--ai .chat-message__sender {
   font-size: var(--fs-xs);
   font-weight: 600;
