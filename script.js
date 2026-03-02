@@ -150,6 +150,9 @@ function initChat() {
   const fab = document.getElementById('chat-fab');
   const chatWindow = document.getElementById('chat-window');
   const closeBtn = document.getElementById('chat-close');
+  const expandBtn = document.getElementById('chat-expand');
+  const expandIcon = document.getElementById('expand-icon');
+  const collapseIcon = document.getElementById('collapse-icon');
   const input = document.getElementById('chat-input');
   const sendBtn = document.getElementById('chat-send');
   const messagesEl = document.getElementById('chat-messages');
@@ -157,6 +160,14 @@ function initChat() {
   if (!fab || !chatWindow) return;
 
   let isOpen = false;
+  let isExpanded = false;
+
+  function toggleExpand() {
+    isExpanded = !isExpanded;
+    chatWindow.classList.toggle('chat-window--expanded', isExpanded);
+    expandIcon.classList.toggle('hidden', isExpanded);
+    collapseIcon.classList.toggle('hidden', !isExpanded);
+  }
 
   function toggleChat() {
     isOpen = !isOpen;
@@ -175,10 +186,12 @@ function initChat() {
     const typing = showTyping();
 
     try {
+      const guardrail = "\n\n(IMPORTANT: Answer in 1-2 concise, conversational paragraphs. Do NOT use markdown points, bolding, or lists. NO ASTERISKS. Respond in plain text only.)";
+
       const response = await fetch(`${HF_SPACE_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text })
+        body: JSON.stringify({ message: text + guardrail })
       });
 
       if (!response.ok) throw new Error('Network response was not ok');
@@ -256,6 +269,7 @@ function initChat() {
 
   fab.addEventListener('click', toggleChat);
   closeBtn.addEventListener('click', toggleChat);
+  if (expandBtn) expandBtn.addEventListener('click', toggleExpand);
   sendBtn.addEventListener('click', sendMessage);
 
   input.addEventListener('keydown', (e) => {
