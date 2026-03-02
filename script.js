@@ -3,6 +3,9 @@
    Interactivity & Animations
    ============================================= */
 
+// TODO: Replace with your actual Hugging Face Space URL after deployment
+// Example: https://adityahegde712-portfolio-ai.hf.space
+const HF_SPACE_URL = "https://adityahegde712-my-ai.hf.space";
 document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initNavigation();
@@ -162,7 +165,7 @@ function initChat() {
     if (isOpen) input.focus();
   }
 
-  function sendMessage() {
+  async function sendMessage() {
     const text = input.value.trim();
     if (!text) return;
 
@@ -171,11 +174,25 @@ function initChat() {
 
     const typing = showTyping();
 
-    setTimeout(() => {
+    try {
+      const response = await fetch(`${HF_SPACE_URL}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text })
+      });
+
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      const data = await response.json();
       typing.remove();
-      const response = getMockResponse(text);
-      addMessage(response, 'ai');
-    }, 700 + Math.random() * 500);
+      addMessage(data.response, 'ai');
+    } catch (error) {
+      console.error('Chat Error:', error);
+      typing.remove();
+      // Fallback to mock response if backend is offline or URL is wrong
+      const fallback = getMockResponse(text);
+      addMessage(fallback, 'ai');
+    }
   }
 
   function addMessage(text, type) {
