@@ -1143,6 +1143,40 @@
       </div>
     </footer>
 
+    <!-- ============ CHAT WIDGET ============ -->
+    <div id="chat-window" class="chat-window" role="dialog" aria-label="Chat with Aditya's AI Assistant">
+      <div class="chat-header">
+        <div class="chat-header__info">
+          <div class="chat-header__avatar">🤖</div>
+          <div>
+            <div class="chat-header__title">Aditya's AI Assistant</div>
+            <div class="chat-header__status">Online</div>
+          </div>
+        </div>
+        <button class="chat-header__close" id="chat-close" aria-label="Close chat">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.3 5.71a1 1 0 00-1.42 0L12 10.59 7.12 5.71a1 1 0 00-1.42 1.42L10.59 12l-4.89 4.88a1 1 0 001.42 1.42L12 13.41l4.88 4.89a1 1 0 001.42-1.42L13.41 12l4.89-4.88a1 1 0 000-1.41z"/></svg>
+        </button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message chat-message--ai">
+          <div class="chat-message__sender">Aditya's AI</div>
+          Hey! 👋 I'm Aditya's AI assistant. Ask me about his projects, experience, skills, or publications — I'd be happy to help!
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about Aditya..." autocomplete="off" />
+        <button class="chat-send" id="chat-send" aria-label="Send message">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <button class="chat-fab" id="chat-fab" aria-label="Chat with Aditya's AI Assistant">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+    </button>
+
     <!-- Scripts -->
     <script src="script.js"></script>
   </body>
