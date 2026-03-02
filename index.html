@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya Hegde — ML Infrastructure & Applied AI Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Aditya Hegde — MS AI student building production-scale ML systems, GPU inference pipelines, and backend AI infrastructure."
+    />
+    <meta name="author" content="Aditya Hegde" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Aditya Hegde — ML Infrastructure & Applied AI Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Production-scale ML systems, GPU inference pipelines, and backend AI infrastructure."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adityahegde712.github.io" />
+
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============ NAVIGATION ============ -->
+    <header class="nav" id="main-nav" role="banner">
+      <div class="container nav__inner">
+        <a href="#hero" class="nav__logo" aria-label="Home"
+          >A<span>.</span>Hegde</a
+        >
+
+        <nav aria-label="Primary navigation">
+          <ul class="nav__links" id="nav-links" role="list">
+            <li>
+              <a href="#hero" class="nav__link nav__link--active">About</a>
+            </li>
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#publications" class="nav__link">Publications</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__overlay" id="nav-overlay"></div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <div class="hero__label">Open to Internship Opportunities</div>
+
+            <h1 class="hero__name">
+              Aditya <span class="gradient-text">Hegde</span>
+            </h1>
+            <p class="hero__title">
+              ML Infrastructure &amp; Applied AI Engineer
+            </p>
+
+            <p class="hero__summary">
+              MS Artificial Intelligence student (4.0 GPA) building
+              production-scale ML systems, GPU inference pipelines, and backend
+              AI infrastructure. Experience spans computer vision, distributed
+              preprocessing systems, model optimization, and geospatial AI
+              workflows.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">
+                View Projects
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="static/aditya_hegde_master_resume.pdf"
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Resume
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero__socials">
+              <a
+                href="https://github.com/AdityaHegde712"
+                class="hero__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aditya-hegde712/"
+                class="hero__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="mailto:aditya.hegde@sjsu.edu"
+                class="hero__social-link"
+                aria-label="Email"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                  />
+                  <path
+                    d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                  />
+                </svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__photo-wrapper">
+            <img
+              src="static/profile.jpg"
+              alt="Aditya Hegde — ML Infrastructure Engineer"
+              class="hero__photo"
+              width="260"
+              height="260"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section class="section section--alt" id="education">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Education</div>
+            <h2 class="section__title">Academic Background</h2>
+          </div>
+
+          <div class="education-grid">
+            <div class="education-card reveal reveal--delay-1">
+              <div class="education-card__degree">
+                MS in Artificial Intelligence
+              </div>
+              <div class="education-card__school">
+                San Jose State University
+              </div>
+              <div class="education-card__meta">
+                <span class="education-card__badge">Aug 2025 – May 2027</span>
+                <span
+                  class="education-card__badge education-card__badge--highlight"
+                  >GPA: 4.0</span
+                >
+              </div>
+              <div class="education-card__courses">
+                <div class="education-card__courses-title">
+                  Relevant Coursework
+                </div>
+                <div class="education-card__courses-list">
+                  <span class="course-tag">Machine Learning</span>
+                  <span class="course-tag">Deep Learning</span>
+                  <span class="course-tag">Applied NLP</span>
+                  <span class="course-tag">Data Structures</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card reveal reveal--delay-2">
+              <div class="education-card__degree">
+                B.Tech in Computer Science
+              </div>
+              <div class="education-card__school">Woxsen University</div>
+              <div class="education-card__meta">
+                <span class="education-card__badge">GPA: 3.73</span>
+                <span
+                  class="education-card__badge education-card__badge--highlight"
+                  >Dean's List (8 Semesters)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Experience</div>
+            <h2 class="section__title">Professional Work</h2>
+            <p class="section__description">
+              Infrastructure-focused ML engineering with emphasis on scale,
+              reliability, and system design.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <!-- SUHORA -->
+            <article class="timeline-card reveal">
+              <div class="timeline-card__header">
+                <div>
+                  <h3 class="timeline-card__role">Data Scientist Intern</h3>
+                  <div class="timeline-card__company">
+                    SUHORA Technologies Pvt. Ltd.
+                  </div>
+                  <div class="timeline-card__subtitle">
+                    Production ML Infrastructure — NDA-safe abstraction
+                  </div>
+                </div>
+                <span class="timeline-card__period">Mar 2024 – Jul 2024</span>
+              </div>
+
+              <ul class="timeline-card__achievements">
+                <li>
+                  Built
+                  <strong>event-driven ingestion pipeline</strong> monitoring
+                  network-attached storage for high-resolution satellite imagery
+                  (~10,000 km² per image).
+                </li>
+                <li>
+                  Developed
+                  <strong>hybrid C# + Python preprocessing pipeline</strong>:
+                  orthogonalization, projection correction, normalization, uint8
+                  simplification, and image tiling for parallel inference.
+                </li>
+                <li>
+                  Implemented
+                  <strong>parallel worker architecture</strong> executing
+                  inference on dedicated GPU server with runtime memory guards
+                  and corrupted input safeguards.
+                </li>
+                <li>
+                  Designed <strong>in-memory reconstruction</strong> and
+                  overlap-aware annotation merging for tiled inference outputs.
+                </li>
+                <li>
+                  Generated <strong>GIS-compatible GeoJSON</strong> vector
+                  outputs for client delivery.
+                </li>
+                <li>
+                  Added <strong>structured logging</strong> with timestamped
+                  exceptions, resource state capture, faulty input tracking, and
+                  automated Git-based issue logging.
+                </li>
+                <li>
+                  <strong>Stress-tested</strong> on ~15 billion pixels (150
+                  large images).
+                </li>
+              </ul>
+
+              <div class="timeline-card__impact">
+                <div class="impact-grid">
+                  <div class="impact-stat">
+                    <span class="impact-stat__value">&lt;1 min</span>
+                    <span class="impact-stat__label"
+                      >Inference per 10K km²</span
+                    >
+                  </div>
+                  <div class="impact-stat">
+                    <span class="impact-stat__value">+40%</span>
+                    <span class="impact-stat__label">mAP Improvement</span>
+                  </div>
+                  <div class="impact-stat">
+                    <span class="impact-stat__value">900+</span>
+                    <span class="impact-stat__label">Images Processed</span>
+                  </div>
+                  <div class="impact-stat">
+                    <span class="impact-stat__value">&gt;95%</span>
+                    <span class="impact-stat__label">Evaluation Accuracy</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Research Assistant -->
+            <article class="timeline-card reveal">
+              <div class="timeline-card__header">
+                <div>
+                  <h3 class="timeline-card__role">Research Assistant</h3>
+                  <div class="timeline-card__company">Woxsen University</div>
+                </div>
+                <span class="timeline-card__period">Aug 2023 – Feb 2024</span>
+              </div>
+
+              <ul class="timeline-card__achievements">
+                <li>
+                  Increased
+                  <strong>video frame interpolation speed by 28.5%</strong>
+                  while simultaneously improving PSNR and SSIM quality metrics.
+                </li>
+                <li>
+                  Evaluated
+                  <strong>federated learning across 10+ edge devices</strong>,
+                  reducing convergence time by 15%.
+                </li>
+                <li>
+                  Reduced <strong>communication overhead by 50%</strong> via
+                  distributed training optimization.
+                </li>
+                <li>
+                  Built <strong>modular PyTorch + OpenCV pipelines</strong> for
+                  reusable experimentation across research projects.
+                </li>
+                <li>
+                  Designed
+                  <strong
+                    >data pipelines handling 50K+ cross-domain records</strong
+                  >.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="section section--alt" id="projects">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Projects</div>
+            <h2 class="section__title">Engineering Case Studies</h2>
+            <p class="section__description">
+              Detailed breakdowns of production-grade systems — from problem to
+              architecture to measurable outcome.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Marine Debris Detector -->
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Marine Debris Detector</h3>
+                <div class="project-card__stack">
+                  <span class="stack-badge">PyTorch</span>
+                  <span class="stack-badge">Docker</span>
+                  <span class="stack-badge">Flask</span>
+                  <span class="stack-badge">React</span>
+                  <span class="stack-badge">Geospatial</span>
+                </div>
+              </div>
+
+              <p class="project-card__overview">
+                End-to-end satellite debris detection system processing 1000+
+                images. Built to identify floating ocean debris from satellite
+                imagery at scale, with spectral index fallbacks for challenging
+                conditions and geo-vector output compatible with
+                industry-standard GIS tools.
+              </p>
+
+              <div class="project-card__metrics">
+                <div class="metric-box">
+                  <span class="metric-box__value">&gt;90%</span>
+                  <span class="metric-box__label">Validation Accuracy</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">+15%</span>
+                  <span class="metric-box__label">Precision vs Baseline</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">1000+</span>
+                  <span class="metric-box__label">Images Processed</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">Dockerized</span>
+                  <span class="metric-box__label">Deployment</span>
+                </div>
+              </div>
+
+              <div class="project-card__details">
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Problem &amp; Approach
+                  </div>
+                  <p class="project-detail__text">
+                    Ocean pollution monitoring requires processing large volumes
+                    of satellite imagery. Manual analysis is impractical at
+                    scale. Built a PyTorch-based detection pipeline with
+                    rule-based geospatial fallbacks (NDWI, NDVI, FDI) for
+                    spectral edge cases.
+                  </p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Engineering Challenges
+                  </div>
+                  <ul class="project-detail__list">
+                    <li>
+                      Handling diverse satellite imagery conditions and
+                      resolutions
+                    </li>
+                    <li>
+                      Balancing precision vs recall for environmental monitoring
+                      use cases
+                    </li>
+                    <li>
+                      Integrating geo-vector output formats (QGIS/ArcGIS
+                      compatible)
+                    </li>
+                    <li>
+                      Batch inference pipeline with REST backend serving JSON
+                      predictions
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <a
+                  href="https://github.com/AdityaHegde712/Marine-Debris-Detection"
+                  class="btn btn--outline btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Seg2Box -->
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Seg2Box Annotation Tool</h3>
+                <div class="project-card__stack">
+                  <span class="stack-badge">Python</span>
+                  <span class="stack-badge">JSON Processing</span>
+                  <span class="stack-badge">Pip Package</span>
+                </div>
+              </div>
+
+              <p class="project-card__overview">
+                Deterministic multi-stage annotation conversion pipeline for
+                transforming segmentation masks to bounding box format. Replaced
+                standard IoU matching with IoMin for significantly improved
+                precision, packaged as a reusable Python module.
+              </p>
+
+              <div class="project-card__metrics">
+                <div class="metric-box">
+                  <span class="metric-box__value">&lt;1ms</span>
+                  <span class="metric-box__label">JSON Processing</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">+13%</span>
+                  <span class="metric-box__label">Precision (IoMin)</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">40%</span>
+                  <span class="metric-box__label">Preprocessing Reduction</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">Modular</span>
+                  <span class="metric-box__label">Reusable Package</span>
+                </div>
+              </div>
+
+              <div class="project-card__details">
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Problem &amp; Approach
+                  </div>
+                  <p class="project-detail__text">
+                    Converting segmentation annotations to bounding box format
+                    is a common but error-prone preprocessing step. Built a
+                    deterministic pipeline with IoMin matching instead of IoU,
+                    yielding measurably better precision across diverse
+                    annotation datasets.
+                  </p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Engineering Challenges
+                  </div>
+                  <ul class="project-detail__list">
+                    <li>
+                      Handling edge cases across heterogeneous annotation
+                      formats
+                    </li>
+                    <li>
+                      Optimizing for sub-millisecond processing without
+                      sacrificing accuracy
+                    </li>
+                    <li>
+                      Ensuring deterministic, reproducible output for CI
+                      pipelines
+                    </li>
+                    <li>
+                      Designing clean API for packaging as reusable Python
+                      module
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <a
+                  href="https://github.com/AdityaHegde712/Seg2Box"
+                  class="btn btn--outline btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Denoising Autoencoder -->
+            <article class="project-card reveal">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Denoising Autoencoder</h3>
+                <div class="project-card__stack">
+                  <span class="stack-badge">PyTorch</span>
+                  <span class="stack-badge">GitHub Actions</span>
+                  <span class="stack-badge">CI/CD</span>
+                  <span class="stack-badge">Model Optimization</span>
+                </div>
+              </div>
+
+              <p class="project-card__overview">
+                Custom lightweight CNN architecture optimized for real-time
+                image denoising. Led a team of 12 engineers, applying pruning,
+                quantization, and datatype optimization to achieve sub-30ms
+                inference while maintaining high quality metrics.
+              </p>
+
+              <div class="project-card__metrics">
+                <div class="metric-box">
+                  <span class="metric-box__value">35+ dB</span>
+                  <span class="metric-box__label">PSNR</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">0.95+</span>
+                  <span class="metric-box__label">SSIM</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">&lt;30ms</span>
+                  <span class="metric-box__label">Inference (512×512)</span>
+                </div>
+                <div class="metric-box">
+                  <span class="metric-box__value">12</span>
+                  <span class="metric-box__label">Team Members Led</span>
+                </div>
+              </div>
+
+              <div class="project-card__details">
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Problem &amp; Approach
+                  </div>
+                  <p class="project-detail__text">
+                    Image denoising at inference speeds suitable for real-time
+                    applications demands carefully optimized model architecture.
+                    Designed a custom lightweight CNN with aggressive model
+                    compression techniques while preserving perceptual quality.
+                  </p>
+                </div>
+                <div class="project-detail">
+                  <div class="project-detail__title">
+                    Engineering Challenges
+                  </div>
+                  <ul class="project-detail__list">
+                    <li>
+                      Balancing model compression ratio vs quality metric
+                      degradation
+                    </li>
+                    <li>
+                      Coordinating 12-person team with production-style
+                      branching workflows
+                    </li>
+                    <li>
+                      Implementing pruning, quantization, and dtype optimization
+                      in PyTorch
+                    </li>
+                    <li>
+                      Setting up GitHub Actions CI/CD for automated testing and
+                      benchmarking
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-card__footer">
+                <a
+                  href="https://github.com/AdityaHegde712/Denoising-Autoencoders"
+                  class="btn btn--outline btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Technical Skills</div>
+            <h2 class="section__title">Technology Stack</h2>
+            <p class="section__description">
+              Core competencies across the full ML infrastructure stack.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-category reveal reveal--delay-1">
+              <div class="skill-category__icon">🧠</div>
+              <h3 class="skill-category__title">ML / AI</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">PyTorch</span>
+                <span class="skill-badge">TensorFlow</span>
+                <span class="skill-badge">Transformers</span>
+                <span class="skill-badge">Scikit-Learn</span>
+                <span class="skill-badge">OpenCV</span>
+                <span class="skill-badge">HuggingFace</span>
+                <span class="skill-badge">Prompt Engineering</span>
+                <span class="skill-badge">RAG</span>
+              </div>
+            </div>
+
+            <div class="skill-category reveal reveal--delay-2">
+              <div class="skill-category__icon">⚙️</div>
+              <h3 class="skill-category__title">Backend / Systems</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">FastAPI</span>
+                <span class="skill-badge">Flask</span>
+                <span class="skill-badge">REST APIs</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Batch Inference</span>
+                <span class="skill-badge">GPU Inference</span>
+                <span class="skill-badge">Structured Logging</span>
+              </div>
+            </div>
+
+            <div class="skill-category reveal reveal--delay-3">
+              <div class="skill-category__icon">💻</div>
+              <h3 class="skill-category__title">Languages</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">C</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">HTML / CSS</span>
+              </div>
+            </div>
+
+            <div class="skill-category reveal reveal--delay-4">
+              <div class="skill-category__icon">☁️</div>
+              <h3 class="skill-category__title">Cloud / DevOps</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">Docker</span>
+                <span class="skill-badge">AWS Lambda</span>
+                <span class="skill-badge">AWS EC2</span>
+                <span class="skill-badge">GCP</span>
+                <span class="skill-badge">Linux</span>
+                <span class="skill-badge">GitHub Actions</span>
+              </div>
+            </div>
+
+            <div class="skill-category reveal reveal--delay-1">
+              <div class="skill-category__icon">🔌</div>
+              <h3 class="skill-category__title">LLM Integrations</h3>
+              <div class="skill-badges">
+                <span class="skill-badge">OpenAI API</span>
+                <span class="skill-badge">Gemini API</span>
+                <span class="skill-badge">Claude API</span>
+                <span class="skill-badge">Structured Outputs</span>
+                <span class="skill-badge">RAG Pipelines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PUBLICATIONS ============ -->
+      <section class="section section--alt" id="publications">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Publications</div>
+            <h2 class="section__title">Research Contributions</h2>
+          </div>
+
+          <div class="publications-grid">
+            <article class="publication-card reveal reveal--delay-1">
+              <span class="publication-card__number">01</span>
+              <div class="publication-card__content">
+                <h3 class="publication-card__title">
+                  Machine Learning-Based Space Risk Management
+                </h3>
+                <span class="publication-card__venue">IEEE ICEPES 2024</span>
+                <p class="publication-card__summary">
+                  Explored application of machine learning techniques for
+                  identifying and managing spacecraft operational risks.
+                  Developed predictive models for anomaly detection in space
+                  systems data.
+                </p>
+              </div>
+            </article>
+
+            <article class="publication-card reveal reveal--delay-2">
+              <span class="publication-card__number">02</span>
+              <div class="publication-card__content">
+                <h3 class="publication-card__title">
+                  Deep Learning Based Dementia Detection on MRI Data
+                </h3>
+                <span class="publication-card__venue"
+                  >Springer ICETSS 2024</span
+                >
+                <p class="publication-card__summary">
+                  Investigated deep learning architectures for early dementia
+                  detection from MRI brain scans. Applied computer vision
+                  techniques to medical imaging for automated diagnostic
+                  support.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ LEADERSHIP ============ -->
+      <section class="section" id="leadership">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Leadership</div>
+            <h2 class="section__title">Technical Leadership</h2>
+          </div>
+
+          <div class="leadership-card reveal">
+            <div>
+              <h3 class="leadership-card__role">Chief Projects Officer</h3>
+              <div class="leadership-card__org">
+                AI &amp; ML Club — San Jose State University
+              </div>
+              <ul class="leadership-card__description">
+                <li>
+                  Managing 17 active projects across various ML and AI domains.
+                </li>
+                <li>
+                  Leading and mentoring 8 project officers in technical
+                  delivery.
+                </li>
+                <li>
+                  Standardized GitHub workflows and engineering best practices.
+                </li>
+                <li>Coordinated 5 industry-led collaboration projects.</li>
+              </ul>
+            </div>
+            <div class="leadership-stats">
+              <div class="leadership-stat">
+                <span class="leadership-stat__value">17</span>
+                <span class="leadership-stat__label">Active Projects</span>
+              </div>
+              <div class="leadership-stat">
+                <span class="leadership-stat__value">70+</span>
+                <span class="leadership-stat__label">Contributors</span>
+              </div>
+              <div class="leadership-stat">
+                <span class="leadership-stat__value">8</span>
+                <span class="leadership-stat__label">Officers Led</span>
+              </div>
+              <div class="leadership-stat">
+                <span class="leadership-stat__value">5</span>
+                <span class="leadership-stat__label">Industry Collabs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ADVANCED / DEEP DIVES ============ -->
+      <section class="section section--alt" id="advanced">
+        <div class="container">
+          <div class="section__header reveal">
+            <div class="section__label">Engineering Deep Dives</div>
+            <h2 class="section__title">Under the Hood</h2>
+            <p class="section__description">
+              Architecture patterns, systems thinking, and performance
+              engineering in practice.
+            </p>
+          </div>
+
+          <div class="deep-dives-grid">
+            <!-- Systems I've Built -->
+            <div class="deep-dive reveal reveal--delay-1">
+              <div class="deep-dive__icon">🏗️</div>
+              <h3 class="deep-dive__title">Systems I've Built</h3>
+              <div class="deep-dive__items">
+                <div class="deep-dive__item">
+                  <strong>Geospatial ML Inference Pipeline</strong> —
+                  Event-driven system ingesting satellite imagery, preprocessing
+                  through hybrid C#/Python pipeline, and executing parallel GPU
+                  inference. Processed 15B+ pixels at &lt;1 min per 10K km².
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Batch Image Processing Engine</strong> — Automated
+                  pipeline processing 900+ SAR &amp; optical images with &gt;95%
+                  evaluation accuracy, structured logging, and fault tolerance.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Annotation Conversion Pipeline</strong> —
+                  Deterministic, sub-millisecond processing for converting
+                  between annotation formats used in object detection workflows.
+                </div>
+              </div>
+            </div>
+
+            <!-- ML Infra Architecture Patterns -->
+            <div class="deep-dive reveal reveal--delay-2">
+              <div class="deep-dive__icon">🔧</div>
+              <h3 class="deep-dive__title">ML Infra Patterns</h3>
+              <div class="deep-dive__items">
+                <div class="deep-dive__item">
+                  <strong>Event-Driven Ingestion</strong> — File system
+                  monitoring triggers for automated pipeline initiation on new
+                  data arrival.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Parallel Worker Architecture</strong> — Distributing
+                  inference workloads across GPU resources with load-aware
+                  scheduling.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Runtime Memory Guards</strong> — Preventing OOM
+                  failures through proactive resource monitoring and detection
+                  overflow limits.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Structured Logging</strong> — Timestamped exceptions,
+                  resource state capture, and automated Git-based issue
+                  tracking.
+                </div>
+              </div>
+            </div>
+
+            <!-- Performance Engineering -->
+            <div class="deep-dive reveal reveal--delay-3">
+              <div class="deep-dive__icon">⚡</div>
+              <h3 class="deep-dive__title">Performance Notes</h3>
+              <div class="deep-dive__items">
+                <div class="deep-dive__item">
+                  <strong>Inference Latency</strong> — ~7 min → &lt;1 min (85%+
+                  reduction) through pipeline architecture redesign.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Model Accuracy</strong> — +40% mAP via systematic
+                  model selection and data-centric iteration.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Distributed Training</strong> — 50% communication
+                  overhead reduction and 15% faster convergence.
+                </div>
+                <div class="deep-dive__item">
+                  <strong>Model Compression</strong> — Sub-30ms inference on
+                  512×512 via pruning, quantization, and dtype optimization.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-inner reveal">
+            <div class="section__label">Get in Touch</div>
+            <h2 class="section__title">Let's Connect</h2>
+            <p class="section__description">
+              Open to ML infrastructure, applied ML, and backend engineering
+              internship opportunities. Reach out to discuss systems, research,
+              or collaboration.
+            </p>
+
+            <div class="contact-links">
+              <a
+                href="mailto:aditya.hegde@sjsu.edu"
+                class="contact-link"
+                aria-label="Send email"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                  />
+                  <path
+                    d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                  />
+                </svg>
+                aditya.hegde@sjsu.edu
+              </a>
+              <a
+                href="https://github.com/AdityaHegde712"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aditya-hegde712/"
+                class="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p class="footer__text">
+          Built by
+          <a
+            href="https://github.com/AdityaHegde712"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Aditya Hegde</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
