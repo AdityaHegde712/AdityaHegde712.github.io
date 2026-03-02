@@ -536,6 +536,144 @@ p {
   fill: currentColor;
 }
 
+/* ============ RESUME MODAL ============ */
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
+}
+
+.resume-modal-overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.resume-modal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px) scale(0.95);
+  transition: all var(--transition);
+}
+
+.resume-modal-overlay--open .resume-modal {
+  transform: translateY(0) scale(1);
+}
+
+.resume-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.resume-modal__title {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+
+.resume-modal__close {
+  color: var(--text-muted);
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.resume-modal__close:hover {
+  color: var(--text-primary);
+}
+
+.resume-modal__close svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.resume-modal__subtitle {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.resume-modal__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.resume-option:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  transform: translateX(4px);
+}
+
+.resume-option__icon {
+  font-size: var(--fs-xl);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.resume-option__info {
+  flex: 1;
+}
+
+.resume-option__title {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.resume-option__desc {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.resume-option__arrow {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-muted);
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.resume-option:hover .resume-option__arrow {
+  fill: var(--accent);
+  transform: translateX(4px);
+}
+
 /* ============ EDUCATION ============ */
 .education-grid {
   display: grid;

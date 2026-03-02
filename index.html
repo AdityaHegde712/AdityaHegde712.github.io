@@ -118,11 +118,10 @@
                   />
                 </svg>
               </a>
-              <a
-                href="static/aditya_hegde_master_resume.pdf"
+              <button
                 class="btn btn--outline"
-                target="_blank"
-                rel="noopener noreferrer"
+                id="resume-btn"
+                type="button"
               >
                 Download Resume
                 <svg
@@ -137,7 +136,46 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </button>
+            </div>
+
+            <!-- Resume Selection Modal -->
+            <div class="resume-modal-overlay" id="resume-modal-overlay">
+              <div class="resume-modal" role="dialog" aria-label="Select Resume">
+                <div class="resume-modal__header">
+                  <h3 class="resume-modal__title">Choose a Resume</h3>
+                  <button class="resume-modal__close" id="resume-modal-close" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.3 5.71a1 1 0 00-1.42 0L12 10.59 7.12 5.71a1 1 0 00-1.42 1.42L10.59 12l-4.89 4.88a1 1 0 001.42 1.42L12 13.41l4.88 4.89a1 1 0 001.42-1.42L13.41 12l4.89-4.88a1 1 0 000-1.41z"/></svg>
+                  </button>
+                </div>
+                <p class="resume-modal__subtitle">Tailored for different roles — select the one that fits best.</p>
+                <div class="resume-modal__options">
+                  <a href="static/aditya_hegde_swe_resume.pdf" class="resume-option" target="_blank" rel="noopener noreferrer">
+                    <div class="resume-option__icon">⚙️</div>
+                    <div class="resume-option__info">
+                      <div class="resume-option__title">Software Engineering</div>
+                      <div class="resume-option__desc">Backend, systems, and infrastructure focus</div>
+                    </div>
+                    <svg class="resume-option__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z" clip-rule="evenodd"/></svg>
+                  </a>
+                  <a href="static/aditya_hegde_aiml_resume.pdf" class="resume-option" target="_blank" rel="noopener noreferrer">
+                    <div class="resume-option__icon">🧠</div>
+                    <div class="resume-option__info">
+                      <div class="resume-option__title">AI / Machine Learning</div>
+                      <div class="resume-option__desc">ML infrastructure, applied AI, and computer vision</div>
+                    </div>
+                    <svg class="resume-option__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z" clip-rule="evenodd"/></svg>
+                  </a>
+                  <a href="static/aditya_hegde_research_resume.pdf" class="resume-option" target="_blank" rel="noopener noreferrer">
+                    <div class="resume-option__icon">📄</div>
+                    <div class="resume-option__info">
+                      <div class="resume-option__title">Research</div>
+                      <div class="resume-option__desc">Publications, experiments, and academic work</div>
+                    </div>
+                    <svg class="resume-option__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm7-1a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.22-6.22H12a.75.75 0 01-.75-.75z" clip-rule="evenodd"/></svg>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="hero__socials">

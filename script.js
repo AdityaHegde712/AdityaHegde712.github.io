@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initNavScrollEffect();
   initActiveNavTracking();
+  initResumeModal();
   initChat();
 });
 
@@ -143,6 +144,34 @@ function initActiveNavTracking() {
   );
 
   sections.forEach((section) => observer.observe(section));
+}
+
+/* ---------- Resume Modal ---------- */
+function initResumeModal() {
+  const btn = document.getElementById('resume-btn');
+  const overlay = document.getElementById('resume-modal-overlay');
+  const closeBtn = document.getElementById('resume-modal-close');
+
+  if (!btn || !overlay) return;
+
+  function openModal() {
+    overlay.classList.add('resume-modal-overlay--open');
+  }
+
+  function closeModal() {
+    overlay.classList.remove('resume-modal-overlay--open');
+  }
+
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('resume-modal-overlay--open')) {
+      closeModal();
+    }
+  });
 }
 
 /* ---------- Chat Widget ---------- */
