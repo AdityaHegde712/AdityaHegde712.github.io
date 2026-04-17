@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLE Track — System Design Roadmap</title>
+    
+    <!-- Fonts: Inter and JetBrains Mono matching the main portfolio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- React and Babel Standalone CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        :root {
+            --bg-primary: #07070d;
+            --accent: #00d4aa;
+            --text-secondary: #8282a0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: white;
+            font-family: 'Inter', -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+
+        #root {
+            min-height: 100vh;
+        }
+
+        /* Loading Skeleton / Placeholder */
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        .loader-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 212, 170, 0.1);
+            border-top: 3px solid var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="loader-container">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading MLE Artifact...</div>
+        </div>
+    </div>
+
+    <script type="text/babel" data-presets="react">
+        /**
+         * JSX Loader Script
+         * Dynamically fetches the React artifact, transpiles it using Babel,
+         * and mounts it into the #root element.
+         */
+        async function loadArtifact() {
+            try {
+                const response = await fetch('../../artifacts/system-design-mle-roadmap.jsx');
+                if (!response.ok) throw new Error('Failed to fetch artifact');
+                
+                let code = await response.text();
+
+                // 1. Clean up imports (browser-native React uses global 'React' and 'ReactDOM')
+                // Specifically handle React hooks which are used in the provided roadmap
+                code = code.replace(/import\s*{\s*useState\s*}\s*from\s*['"]react['"];?/g, 'const { useState } = React;');
+                code = code.replace(/import\s+.*\s+from\s*['"].*['"];?/g, ''); // Remove other imports
+                
+                // 2. Handle export default
+                code = code.replace(/export\s+default\s+function\s+App/g, 'function ArtifactApp');
+
+                // 3. Transpile the cleaned JSX
+                const transformed = Babel.transform(code, {
+                    presets: ['react']
+                }).code;
+
+                // 4. Create the final execution string and get the component
+                // We add a return statement to the eval to grab our ArtifactApp function
+                const componentDefinition = transformed + '\n;ArtifactApp;';
+                const ArtifactComponent = eval(componentDefinition);
+
+                // 5. Mount the component
+                const root = ReactDOM.createRoot(document.getElementById('root'));
+                root.render(React.createElement(ArtifactComponent));
+
+            } catch (error) {
+                console.error('Visualization Error:', error);
+                document.getElementById('root').innerHTML = `
+                    <div class="loader-container">
+                        <div style="color: #ff4d4d; font-family: 'JetBrains Mono', monospace; text-align: center; padding: 20px;">
+                            <h2 style="margin-bottom: 10px;">Visualization Error</h2>
+                            <p style="font-size: 14px; opacity: 0.8;">${error.message}</p>
+                            <p style="margin-top: 20px; font-size: 12px; opacity: 0.5;">Check the console for details.</p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        loadArtifact();
+    </script>
+</body>
+</html>
